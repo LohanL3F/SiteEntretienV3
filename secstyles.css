@@ -1,0 +1,260 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+#PrincipalPage {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  flex-direction: column;
+  z-index: -3;
+}
+
+#PrincipalPageVideo {
+  object-fit: cover;
+  position: absolute;
+  opacity: 0%;
+  animation-name: opacitychange;
+  animation-duration: 3s;
+  height: 100%;
+  width: 100%;
+  animation-name: opacitychange;
+  animation-duration: 3s;
+  z-index: -3;
+}
+
+@keyframes opacitychange {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
+  }
+}
+
+#PrincipalPageVideoNight {
+  object-fit: cover;
+  position: absolute;
+  opacity: 100%;
+  animation-name: opacitychange;
+  animation-duration: 3s;
+  height: 100%;
+  width: 100%;
+  opacity: 50%;
+  z-index: -2;
+  animation-name: opacitychange2;
+  animation-duration: 3s;
+}
+
+@keyframes opacitychange2 {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 50%;
+  }
+}
+
+#barriersPrincipalPage {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  animation-name: barrierspopup;
+  animation-duration: 3s;
+  z-index: -1;
+  object-fit: cover;
+  bottom: 0;
+}
+
+@keyframes barrierspopup {
+  from {
+    transform: translateY(400px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+#lightsPrincipalPage {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  animation-name: lightspopup;
+  animation-duration: 3s;
+}
+
+@keyframes lightspopup {
+  from {
+    transform: translateY(-200px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+#characterPrincipalPageContent {
+  position: absolute;
+  width: 50%;
+  animation-name: slideUp;
+  animation-duration: 3.5s;
+  object-fit: cover;
+  bottom: 0;
+  z-index: 2;
+  right: 20px;
+  right: 1%;
+}
+
+#characterPrincipalPage {
+  width: 100%;
+  animation-name: breathing;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(1900px);
+  }
+
+  25% {
+    transform: translateY(1900px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#panelPrincipalPageContent {
+  position: absolute;
+  width: 100%;
+  animation-name: slideUp;
+  animation-duration: 3s;
+  z-index: 1;
+  bottom: -5px;
+  object-fit: cover;
+}
+
+#panelText {
+  position: absolute;
+  width: 90%;
+  z-index: 3;
+  object-fit: cover;
+  left: 0.5%;
+}
+
+#panelPrincipalPage {
+  width: 90%;
+}
+
+#panelProjects {
+  position: absolute;
+  width: 13%;
+  bottom: 20%;
+  left: 15%;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 3;
+  transform: rotate(-4deg);
+  border-radius: 10px;
+}
+
+#panelProjectsImage {
+  width: 100%;
+}
+
+#panelProjects:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+#panelTravel {
+  position: absolute;
+  width: 13%;
+  bottom: 22%;
+  left: 35%;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 3;
+  transform: rotate(3deg);
+  border-radius: 5px;
+  animation-name: flying;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+@keyframes flying {
+  0% {
+    transform: rotate(4deg);
+  }
+
+  50% {
+    transform: rotate(3deg) scale(2);
+  }
+
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
+#panelTravelImage {
+  width: 100%;
+}
+
+#panelTravel:hover {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.panelButton {
+  width: 80%;
+  background-color: #7e8347;
+  border: 0px solid;
+  border-radius: 10px;
+  height: 20%;
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#credits {
+  position: absolute;
+  color: white;
+  left: 5px;
+  bottom: -15px;
+  z-index: 20;
+}
+
+/* Projets page */
+
+#PrincipalPage2 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  flex-direction: column;
+  z-index: -3;
+}
